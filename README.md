@@ -1,7 +1,7 @@
-#Project Requirements
+# Project Requirements
 While you're building your quiz app, you'll need to keep in mind what your app must do and how it should be built.
 
-##User experience requirements
+## User experience requirements
 The following requirements cover what the app must do, from the user's perspective.
 
 * The starting screen should have a button that users can click to start the quiz.
@@ -16,7 +16,7 @@ The following requirements cover what the app must do, from the user's perspecti
 * Users should be shown their overall score at the end of the quiz. In other words, how many questions they got right out of the total questions asked.
 * Users should be able to start a new quiz.
 
-##Technical requirements
+## Technical requirements
 Your quiz app must:
 
 * Render answer choices in a <form>.
