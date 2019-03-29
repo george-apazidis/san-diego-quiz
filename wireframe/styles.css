@@ -1,0 +1,30 @@
+body {
+    background-image: url(../images/gray-x-box.png);
+ }
+
+ header img {
+    height: 80px;
+    width: 80px;
+ }
+
+ .wrap {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(255,255,255,0.8);
+    color: #444;
+    text-align: center;
+ }
+
+ li {
+    list-style-type: none;
+    display: inline;
+ }
+
+ label {
+    display: block;
+ }
+ 
+ img { 
+    height: 200px;
+    width: 300px;
+ }
