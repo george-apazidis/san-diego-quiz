@@ -11,34 +11,71 @@
       
       <div class="wrap">
          <header role="banner">
-               <img src="../images/gray-x-box.png" alt="logo">
-               <h1>San Diego Quiz</h1>             
+               <!-- logo -->
+               <!-- <div data-wf="logo" class="logo"></div> -->
+               <div class="logo wf-gray">logo</div>
+               <!-- title -->
+               <h1>San Diego Quiz</h1>
+               <!-- start btn -->
+               
          </header>
 
          <main role="main">
 
             <section class="start-section" >
 
-
+               <p>Think you know about the city of <nobr>San Diego?</nobr></p>
+               <button>Start Quiz</button>
                
             </section>
 
             <section class="score">
                   <ul>
                      <li>Question: <span class="questionNumber">1</span>/10</li>
-                     <li>Score: 1</li>
+                     <li>Score: 0</li>
                   </ul>
             </section>
 
             <section class="question-section">
 
+               <p>Approximately how many people live in <nobr>San Diego?</nobr></p>>
+               
+
+               <form>
+                     <fieldset>
+                        <label class="answerOption">
+                           <input type="radio" value="Answer 1" name="answer" required="">
+                           <span>Answer 1</span>
+                        </label>
+                        <label class="answerOption">
+                           <input type="radio" value="Answer 2" name="answer" required="">
+                           <span>Answer 2</span>
+                        </label>
+                        <label class="answerOption">
+                           <input type="radio" value="Answer 3" name="answer" required="">
+                           <span>Answer 3</span>
+                        </label>
+                        <label class="answerOption">
+                           <input type="radio" value="Answer 4" name="answer" required="">
+                           <span>Answer 4</span>
+                        </label>
+                        <button type="submit" class="submitBtn">Submit</button>
+                     </fieldset>
+               </form>
+
+               <!-- <div class="wf-white answerBtn">( ) Answer 1</div>
+               <div class="wf-white answerBtn">( ) Answer 2</div>
+               <div class="wf-white answerBtn">( ) Answer 3</div>
+               <div class="wf-white answerBtn">( ) Answer 4</div>
+               
+               <button class="submitBtn">Submit</button> -->
                
 
             </section>
 
             <section class="answer-section">
                <h2>CORRECT!</h2>
-               <img class="correct-img" src="../images/gray-x-box.png">
+               <img class="correct-img" src="images/gray-x-box.png">
                <p>Blurb about the correct answer goes here...</p>
                <button type="submit" class="submitBtn"><a href="index-wireframe-question.html">Next Question ></a> <br>(or <a href="index-wireframe-results.html">Results ></a>)</button>
             </section>
