@@ -398,5 +398,9 @@ input[type=radio] {
     .question-section {
         margin-top: 20px;
     }
+
+    .ty-msg {
+        text-align: center;
+    }
 }
 

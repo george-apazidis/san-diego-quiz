@@ -167,13 +167,42 @@ function renderResults () {
 
     // get expertise level
     // make this part dynamic in future based off dynamic # of questions
-    let expertLevel = (score < 5) ? 'Out-of-towner'
+    let expertLevel = (score < 5) ? 'Potential Visitor'
                     : (score > 4 && score < 8) ? 'Tourist'
-                    : (score > 8) ? 'Resident'
+                    : (score > 7) ? 'Tour Guide'
+                    : (score === 10) ? 'Mayor'
                     : false;
     
-    // render expertise level
-    $('.js-level').text(expertLevel);
+    // function getScoreLevels ()
+    // divide score by # of questions
+    // level 1 <= 40%           ---> 0 to Round(max * 0.4)                     i.e. for 17 max it's 0 to 7
+    // level 2 > 40% && <= 70%  ---> Round(max * 0.4 + 1 ) to Round(max * 0.7) i.e. for 17 max it's 8 to 12
+    // level 3 > 70% && < 100%  ---> Round(max * 0.7 +1 ) to max - 1           i.e. for 17 max it's 13 to 16
+    // level 4 = 100%           ---> max                                       i.e. for 17 max it's 17
+    // put in vars? level-1-min, level-1-max, level-2-min etc.
+
+    let customMsg = '';
+
+    switch (expertLevel) {
+        case 'Potential Visitor':
+            customMsg = `It looks like you don't know much about San Diego. 
+                        Be sure to visit some time and experience all the 
+                        great things San Diego has to offer!`;
+            break;
+        case 'Tourist':
+            customMsg = `Nice work! You seem to know a few things about San Diego.
+                        Hope you learned something new. Don't forget to visit!`;
+            break;
+        case 'Tour Guide':
+            customMsg = `Great work! You know a lot about the city of San Diego
+                        and all the great things the city has to offer!`;
+            break;
+        case 'Mayor' :
+            customMsg = `Wow! A perfect score! Have you thought about running for office?`;
+            break;
+    }
+
+    $('.js-custom-msg').text(customMsg);
 
 }
 
@@ -188,6 +217,7 @@ function handleRestartButton () {
         $('.results-section').hide();
         $('.js-currentScore').text(score)
         $('.score').show();
+        $('.nextBtn').text('Next Question');
 
         renderQuestion();
         renderAnswers();
@@ -196,7 +226,6 @@ function handleRestartButton () {
     });
 
 } 
-
 
 // Show final results
 
