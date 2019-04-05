@@ -299,12 +299,12 @@ input[type=radio] {
     }
 
     .correct-img {
-        height: 209px;
+        height: 201px;
     }
 
     label {
         padding: 0 21px;
-        min-height: 64px;
+        min-height: 62px;
     }
 
     .js-blurb {
