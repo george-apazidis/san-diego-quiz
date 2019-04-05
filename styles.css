@@ -188,7 +188,7 @@ section {
 legend {
     margin-bottom: 20px;
     line-height: 22px;
-    min-height: 52px;
+    min-height: 44px;
     display: flex;
     align-items: center;
 }
@@ -249,7 +249,7 @@ input[type=radio] {
 
 .correct-img {
     width: 100%;
-    height: 163px;
+    height: 155px;
     background-size: cover;
     background-position: center;
     margin-bottom: 10px;
@@ -306,7 +306,7 @@ input[type=radio] {
     }
 
     .correct-img {
-        height: 217px;
+        height: 209px;
     }
 
     label {
