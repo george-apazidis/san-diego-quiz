@@ -112,6 +112,7 @@ body.intro {
     height: 100%;
     width: 100%;
     padding: 20px;
+    padding-top: 5px;
     background-color: rgba(255,255,255,0.8);
     color: #222;
     overflow: auto;
@@ -132,7 +133,7 @@ header {
 }
 
 h1 {
-    font-family: 'Bai Jamjuree', sans-serif;
+    /* font-family: 'Bai Jamjuree', sans-serif;
     font-size: 34px;
     margin-top:0;
     padding-top: 39px;
@@ -146,7 +147,18 @@ h1 {
                 0 0 3px #fff, 
                 0 0 3px #fff, 
                 0 0 2px #fff, 
-                0 0 1px #fff;
+                0 0 1px #fff; */
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 32px;
+    margin-top: 0;
+    padding-top: 20px;
+    background-image: url(images/san-diego-logo-transparent50.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 2px #fff, 0 0 1px #fff;
 }
 
 .start-section span {
@@ -168,7 +180,7 @@ section {
 .score ul {
     text-align: center;
     padding: 0px;
-    margin: 20px 0 10px 0;
+    margin: 20px 0 10px 6px;
     font-size: 18px;
 }
 
