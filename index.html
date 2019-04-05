@@ -20,45 +20,51 @@
    </head>
    <body class="intro">
       
-      <div class="wrap">
+      <main class="wrap">
          <header role="banner">
                <div class="logo"></div>
                <h1>San Diego Quiz</h1>
          </header>
 
-         <main role="main">
+         <section class="start-section" >
+            <p>Think you know about the city of <span>San Diego?</span></p>
+            <button>Start Quiz</button>
+         </section>
 
-            <section class="start-section" >
-               <p>Think you know about the city of <span>San Diego?</span></p>
-               <button>Start Quiz</button>
-            </section>
+         <section class="score">
+               <ul>
+                  <li>Question: <span class="js-questionNumber">1</span>/10</li>
+                  <li>Score: <span class="js-currentScore">0</span></li>
+               </ul>
+         </section>
 
-            <section class="score">
-                  <ul>
-                     <li>Question: <span class="questionNumber">1</span>/10</li>
-                     <li>Score: <span class="js-currentScore">0</span></li>
-                  </ul>
-            </section>
-   
 
-            <section class="question-section">         
-               <form>
-                     <fieldset>
-                        <legend></legend>
-                        <button type="submit" class="submitBtn">Submit</button>
-                     </fieldset>
-               </form>
-            </section>
+         <section class="question-section">         
+            <form>
+                  <fieldset>
+                     <legend></legend>
+                     <button type="submit" class="submitBtn">Check</button>
+                  </fieldset>
+            </form>
+         </section>
 
-            <section class="answer-section">
-                  <button type="submit" class="nextBtn">Next Question</button>
-            </section>
+         <section class="answer-section">
+               <button type="submit" class="nextBtn">Next Question</button>
+         </section>
 
-            <section class="results-section">
+         <section class="results-section">
+               <h2 class="final-score"></h2>
+               <ul>
+                  <li>0-4 Out-of-towner</li>
+                  <li>5-7 Tourist</li>
+                  <li>8-10 Resident</li>
+               </ul>
+               <p>You have answered <span class="js-score"></span> questions out of <span class="js-num-of-questions"></span> corrently which earns you the <span class="js-level"></span> status!</p>
+               <p>Thank you for taking the quiz!</p>
+               <button class="submitBtn">Restart the Quiz</button>
+         </section>
 
-            </section>
-
-         </main>
-      </div>
+      </main>
+      
   </body>
 </html>

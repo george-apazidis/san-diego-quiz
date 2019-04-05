@@ -23,7 +23,6 @@ const STORE = [
         correctAnswer: 'Lindbergh Field',
         blurb: 'San Diego International Airport is also called Lindbergh Field, after aviator Charles Lindbergh',
         image: 'airport.jpg',
-        blurb: 'Lindbergh Field',
         alt: 'sign of San Diego International Airport'
     },
     {
@@ -49,7 +48,7 @@ const STORE = [
         ],
       correctAnswer: 'Little Italy',
       image: 'farmers-market.png',
-      blurb: 'The Little Italy Mercato is the largest farmers\' market in San Diego County with over 200 vendors. It\'s open every Saturday, year-round, rain or shine, every Saturday from 8am-2pm.',
+      blurb: 'The Little Italy Mercato is the largest farmers\' market in San Diego County with over 200 vendors. It\'s open year-round, every Saturday from 8am-2pm.',
       alt: 'Farmer\'s Market in Little Italy, San Diego'
     },
     {
@@ -66,7 +65,7 @@ const STORE = [
       alt: 'golf course in San Diego'
     },
     {
-      question: 'What major attraction do people travel miles to see in North San Diego County?',
+      question: 'What major attraction do people travel to see in North San Diego County?',
       answers: [
         'Disneyland',
         'Legoland',
@@ -88,7 +87,7 @@ const STORE = [
       ],
       correctAnswer: 'Cabrillo',
       image: 'cabrillo.jpeg',
-      blurb: 'Juan Cabrillo made his first anchorage in California here in 1542. The site has a historic lighthouse built in 1854, tidepools and great views. Migrating gray whales can be seen here.',
+      blurb: 'Juan Cabrillo made his first anchorage in California here in 1542. The site has a historic lighthouse built in 1854, tidepools and great views.',
       alt: 'Cabrillo National Monument in San Diego'
     },
     {
@@ -114,7 +113,7 @@ const STORE = [
       ],
       correctAnswer: 'San Diego Convention Center',
       image: 'san-diego-convention-center.jpg',
-      blurb: 'the convention center is located about 1 mile southwest of Balboa Park. Balboa Park is a 1,200-acre urban cultural park which contains open space areas, natural vegetation zones gardens, walking paths, museums, several theaters, and the world-famous San Diego Zoo.',
+      blurb: 'The convention center is located about 1 mile southwest of Balboa Park. Balboa Park is a 1,200-acre urban cultural park which contains walking paths, museums, theaters, and the world-famous San Diego Zoo.',
       alt: 'San Diego Convention Center'
     },
     {
