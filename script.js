@@ -83,7 +83,7 @@ function renderCorrectAnswer (isAnswerCorrect) {
         .prepend(`<h2 class="${result}">${result}!</h2>`);
 
     // assign image to background of div
-    console.log(`${STORE[questionNum].image}`);
+
     // $('.correct-img').css('background-image', 'url("images/population.jpg")');
     $('.correct-img').css('background-image', 'url("images/' + `${STORE[questionNum].image}` + '")');
     

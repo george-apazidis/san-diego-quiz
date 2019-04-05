@@ -155,7 +155,7 @@ section {
 }
 
 .question-section {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .score {
@@ -189,6 +189,8 @@ legend {
     margin-bottom: 20px;
     line-height: 22px;
     min-height: 52px;
+    display: flex;
+    align-items: center;
 }
 
 label {
@@ -261,7 +263,7 @@ input[type=radio] {
 .correct, .incorrect {
     text-align: center;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -389,6 +391,14 @@ input[type=radio] {
 
     .score ul {
         font-size: 20px;
+    }
+
+    .correct, .incorrect {
+        margin-top: 20px;
+    }
+
+    .question-section {
+        margin-top: 20px;
     }
 }
 
