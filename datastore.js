@@ -1,3 +1,5 @@
+'use strict';
+
 const STORE = [
     {
       question: 'Approximately how many people live in San Diego?',
