@@ -76,12 +76,11 @@ function renderCorrectAnswer (isAnswerCorrect) {
         .prepend(`<div class="correct-img"></div>`)
         .prepend(`<p class="js-correct">Correct Answer: <strong>${STORE[questionNum].correctAnswer}</strong>`)
         .prepend(`<h2 class="${result}">${result}!</h2>`);
-
+    
     // assign image to background of div
-
     // $('.correct-img').css('background-image', 'url("images/population.jpg")');
     $('.correct-img').css('background-image', 'url("images/' + `${STORE[questionNum].image}` + '")');
-    
+
     // highlight effect
     if (isAnswerCorrect === true) { 
         $('.answer-section h2').effect("highlight",{color:"#5cb85c"},1500);
@@ -110,6 +109,11 @@ function updateScore () {
         .effect('highlight',{color:"#5cb85c"},1500);
 }
 
+// preload current image
+function preloadImage(imagePath) {
+    $('<img/>')[0].src = imagePath;
+}
+
 function handleNextButton() {
        
     $('.nextBtn').click(event => {
@@ -129,6 +133,10 @@ function handleNextButton() {
             // render next question and answers
             renderQuestion();
             renderAnswers(); 
+
+            // preload current answer image here for quick loading on answer page.
+            // $([`images/${STORE[questionNum].image}`]).preloadImage();
+            preloadImage(`images/${STORE[questionNum].image}`);
         }
         else {
             // render results
