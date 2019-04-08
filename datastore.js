@@ -10,7 +10,7 @@ const STORE = [
         '1 million'
         ],
       correctAnswer: '1.4 million',
-      blurb: 'San Diego is the second-most populous city in California, behind L.A. (4.1 million).',
+      blurb: 'San Diego is the second-most populous city in California, behind L.A. (4.1 million). The population of San Diego <em>county</em> is about 3.3 million',
       image: 'population.jpg',
       alt: 'people on a San Diego beach'
     },
@@ -76,7 +76,7 @@ const STORE = [
         ],
       correctAnswer: 'Legoland',
       image: 'legoland.jpg',
-      blurb: 'Opening in 1999, Legoland is located in Carlsbad, about 20 miles north of downtown San Diego',
+      blurb: 'Opening in 1999, Legoland is located in Carlsbad, about 20 miles north of downtown San Diego.',
       alt: 'entrance of Legoland in San Diego'
     },
     {
@@ -85,11 +85,11 @@ const STORE = [
       'Cabrillo',
       'Unconditional Surrender',
       'California Tower',
-      'Lava Beds'
+      'Fort Ord'
       ],
       correctAnswer: 'Cabrillo',
       image: 'cabrillo.jpeg',
-      blurb: 'Juan Cabrillo made his first anchorage in California here in 1542. The site has a historic lighthouse built in 1854, tidepools and great views.',
+      blurb: 'The Cabrillo monument is located in Point Loma where Juan Cabrillo made his first anchorage in 1542. The site has tidepools, panoramic views and a historic lighthouse which was built in 1854.',
       alt: 'Cabrillo National Monument in San Diego'
     },
     {
@@ -102,7 +102,7 @@ const STORE = [
       ],
       correctAnswer: 'more than 4,000',
       image: 'san-diego-zoo.jpg',
-      blurb: 'One of the largest zoos in the country, the San Diego Zoo has more than 4,000 animals - and 700,000 exotic plants - on its 100 acres (40 hectares).',
+      blurb: 'One of the largest zoos in the country, the San Diego Zoo has more than 4,000 animals - and 700,000 exotic plants - on its 100 acres.',
       alt: 'San Diego Zoo entrnace'
     },
     {
@@ -128,7 +128,7 @@ const STORE = [
     ],
     correctAnswer: 'Comic-Con',
     image: 'comic-con.jpg',
-    blurb: 'Began in 1970 when a group of comics, movie and science fiction fans banded together to put on the first comic book convention in southern California. It drew about 100 attendees. In 2018, the convention drew more than 130,000 attendees.',
+    blurb: 'Comic-Con began in 1970 when a group of comics and science fiction fans banded together to put on the first comic book convention in southern California. It drew about 100 attendees. In 2018, the convention drew more than 130,000 attendees.',
     alt: 'people in costumes at Comic-Con San Diego'
     }
 ];

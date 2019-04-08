@@ -284,10 +284,46 @@ input[type=radio] {
 
 .js-correct {
     text-align: center;
-    margin-top: 12px;
-    margin-bottom: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 37px;
 }
 
+.results-section ul {
+    display: none;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.results-section li {
+    margin: 6px 0;
+}
+
+.results-section li > span {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.results-section li > span:first-child {
+    text-align: right;
+    width: 40%;
+}
+
+.results-section li > span:first-child::after {
+    content: ":";
+}
+
+.results-section li > span {
+    text-align: left;
+    width: 55%;
+    display: inline-block;
+}
+
+.ty-msg {
+    text-align: center;
+}
 
 @media (min-width: 350px) { 
     body {
@@ -312,7 +348,7 @@ input[type=radio] {
     }
 
     .answer-section p {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -399,8 +435,6 @@ input[type=radio] {
         margin-top: 20px;
     }
 
-    .ty-msg {
-        text-align: center;
-    }
+
 }
 

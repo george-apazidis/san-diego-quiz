@@ -34,7 +34,7 @@
 
          <section class="score">
                <ul>
-                  <li>Question: <span class="js-questionNumber">1</span>/10</li>
+                  <li>Question: <span class="js-questionNumber">1</span>/<span class="js-maxQuestions"></span></li>
                   <li>Score: <span class="js-currentScore">0</span></li>
                </ul>
          </section>
@@ -56,12 +56,11 @@
          <section class="results-section">
                <h2 class="final-score"></h2>
                <ul>
-                  <li><span class="js-level-1-score"></span> <span class="js-level-1-name"></span></li>
-                  <li><span class="js-level-2-score"></span> <span class="js-level-1-name"></span></li>
-                  <li><span class="js-level-3-score"></span> <span class="js-level-1-name"></span></li>
-                  <li><span class="js-level-4-score"></span> <span class="js-level-1-name"></span></li>
+                  <li class="js-l1"><span class="scoreRange"></span> <span class="name"></span></li>
+                  <li class="js-l2"><span class="scoreRange"></span> <span class="name"></span></li>
+                  <li class="js-l3"><span class="scoreRange"></span> <span class="name"></span></li>
+                  <li class="js-l4"><span class="scoreRange"></span> <span class="name"></span></li>
                </ul>
-               <p>You have answered <span class="js-score"></span> questions out of <span class="js-num-of-questions"></span> correctly which earns you the <span class="js-level"></span> status!</p>
                <p class="js-custom-msg"></p>
                <p class="ty-msg">Thank you for taking the quiz!</p>
                <button class="submitBtn">Restart the Quiz</button>

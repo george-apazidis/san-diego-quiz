@@ -11,11 +11,12 @@ function resizeStuff() {
     //Time consuming resize stuff here
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-   }
+}
+
 let TO = false;
 $(window).resize(function(){
-    console.log("resize!");
-if(TO !== false)
-    clearTimeout(TO);
-TO = setTimeout(resizeStuff, 200); //200 is time in miliseconds
+    if(TO !== false) {
+        clearTimeout(TO);
+    }
+    TO = setTimeout(resizeStuff, 200); //200 is time in miliseconds
 });

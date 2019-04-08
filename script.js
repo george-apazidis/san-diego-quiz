@@ -11,6 +11,7 @@ function handleStartButton () {
         // Hide these elements specific to welcome screen 
         $('.start-section, .logo').hide();
 
+        $('.js-maxQuestions').text(STORE.length);
         // Show these elements
         $('.score').show();
 
@@ -25,7 +26,7 @@ function handleStartButton () {
 
 // Render Question
 function renderQuestion () {
-    $('legend').text(`${STORE[questionNum].question}`);
+    $('legend').text(STORE[questionNum].question);
     $('.question-section').show();
 }
 
@@ -135,7 +136,6 @@ function handleNextButton() {
             renderAnswers(); 
 
             // preload current answer image here for quick loading on answer page.
-            // $([`images/${STORE[questionNum].image}`]).preloadImage();
             preloadImage(`images/${STORE[questionNum].image}`);
         }
         else {
@@ -173,46 +173,95 @@ function renderResults () {
     // render # of questions
     $('.js-num-of-questions').text(`${STORE.length}`);
 
+    // if more than 9 questions then display levels and custom level message
+    if (STORE.length > 8) {
+        renderCustomLevels();
+        $('.results-section ul').show();
+    } 
+}
+
+
+function renderCustomLevels () {
+
+    let levelRanges = getRanges(); // returns array with max # for each level
+
+    // render level ranges status on results page
+    $('.js-l1 .scoreRange').text(`0 - ${levelRanges[0]}`);
+    $('.js-l2 .scoreRange').text(`${levelRanges[0] + 1} - ${levelRanges[1]}`);
+    $('.js-l3 .scoreRange').text(`${levelRanges[1] + 1} - ${levelRanges[2]}`);
+    $('.js-l4 .scoreRange').text(STORE.length);
+
+    const level_1 = 'Potential Visitor';
+    const level_2 = 'Tourist';
+    const level_3 = 'Tour Guide';
+    const level_4 = 'Mayor';
+
+    // render level names
+    $('.js-l1 .name').text(level_1);
+    $('.js-l2 .name').text(level_2);
+    $('.js-l3 .name').text(level_3);
+    $('.js-l4 .name').text(level_4);
+
     // get expertise level
-    // make this part dynamic in future based off dynamic # of questions
-    let expertLevel = (score < 5) ? 'Potential Visitor'
-                    : (score > 4 && score < 8) ? 'Tourist'
-                    : (score > 7) ? 'Tour Guide'
-                    : (score === 10) ? 'Mayor'
-                    : false;
-    
-    // function getScoreLevels ()
-    // divide score by # of questions
-    // level 1 <= 40%           ---> 0 to Round(max * 0.4)                     i.e. for 17 max it's 0 to 7
-    // level 2 > 40% && <= 70%  ---> Round(max * 0.4 + 1 ) to Round(max * 0.7) i.e. for 17 max it's 8 to 12
-    // level 3 > 70% && < 100%  ---> Round(max * 0.7 +1 ) to max - 1           i.e. for 17 max it's 13 to 16
-    // level 4 = 100%           ---> max                                       i.e. for 17 max it's 17
-    // put in vars? level-1-min, level-1-max, level-2-min etc.
+    let expertLevel = getExpertiseLevel(levelRanges); // returns a # 1-4
 
     let customMsg = '';
 
+    // render custom message based on level
     switch (expertLevel) {
-        case 'Potential Visitor':
-            customMsg = `It looks like you don't know much about San Diego. 
-                        Be sure to visit some time and experience all the 
-                        great things San Diego has to offer!`;
+        case '1':
+            $('.js-l1').css('font-weight', 'bold');
+            customMsg = `It looks like you don't know much about San Diego, 
+                        so we are calling you a <strong>${level_1}</strong>. 
+                        Be sure to visit some time and experience all the great things San Diego has to offer!`;
             break;
-        case 'Tourist':
-            customMsg = `Nice work! You seem to know a few things about San Diego.
+        case '2':
+            $('.js-l2').css('font-weight', 'bold');
+            customMsg = `Nice work! You seem to know a few things about San Diego. 
+                        You have earned the <strong>${level_2}</strong> status! 
                         Hope you learned something new. Don't forget to visit!`;
             break;
-        case 'Tour Guide':
+        case '3':
+            $('.js-l3').css('font-weight', 'bold');
             customMsg = `Great work! You know a lot about the city of San Diego
-                        and all the great things the city has to offer!`;
+                        and all the great things the city has to offer! You have earned the <strong>${level_3}</strong>`;
             break;
-        case 'Mayor' :
-            customMsg = `Wow! A perfect score! Have you thought about running for office?`;
+        case '4' :
+            $('.js-l4').css('font-weight', 'bold');
+            customMsg = `Wow! A perfect score! You've earned the <strong>${level_4}</strong> status. Have you thought about running for office?`;
             break;
     }
 
-    $('.js-custom-msg').text(customMsg);
-
+    $('.js-custom-msg').html(customMsg);
 }
+
+function getRanges () {
+    // max score
+    const maxScore = STORE.length;
+
+    // define level ranges dynamically based on scores
+    const level_1_max = Math.round(maxScore * 0.4); // level 1 = bottom 40%
+    const level_2_max = Math.round(maxScore * 0.7); // level 2 = roughly 40% to 70%      
+    const level_3_max = maxScore - 1;               // level 3 = roughly 70% to max -1 (*level 4 = max)
+
+    let levelRanges = [level_1_max, level_2_max, level_3_max];
+
+    return (levelRanges);
+}
+
+// returns a string with the appropriate level of expertise based on score
+function getExpertiseLevel (levelRanges) {
+
+    // assign expertise status based off score
+    let expertiseLevel = (score <= levelRanges[0]) ? '1'
+       : (score > levelRanges[0] && score <= levelRanges[1]) ? '2'
+       : (score > levelRanges[1] && score <= levelRanges[2]) ? '3'
+       : (score === STORE.length) ? '4'
+       : false;
+    
+    return (expertiseLevel);
+}
+
 
 
 function handleRestartButton () {
@@ -226,11 +275,12 @@ function handleRestartButton () {
         $('.js-currentScore').text(score)
         $('.score').show();
         $('.nextBtn').text('Next Question');
+        $('.results-section li').css('font-weight','normal');
 
         renderQuestion();
         renderAnswers();
         updateQuestionNum();
-        
+
     });
 
 } 
