@@ -446,9 +446,9 @@ dd {
         min-height: 62px;
     }
 
-    .js-blurb {
+    /* .js-blurb {
         min-height: 62px;
-    }
+    } */
 
     .answer-section p {
         font-size: 15px;
