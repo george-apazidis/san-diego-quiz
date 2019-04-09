@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <title>San Diego Quiz</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width">
-      <title>San Diego Quiz</title>
+      <meta name="author" content="George Apazidis">
       <meta name="description" content="A quiz to test your knowledge of the city of San Diego">
       <link href="styles.css" rel="stylesheet" type="text/css" />
       <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
@@ -24,7 +25,7 @@
       <main class="wrap">
          <header role="banner">
                <div class="logo"></div>
-               <h1>San Diego Quiz</h1>
+               <h1><a href="#">San Diego Quiz</a></h1>
          </header>
 
          <section class="start-section" >
@@ -64,7 +65,11 @@
                <p class="js-custom-msg"></p>
                <p class="ty-msg">Thank you for taking the quiz!</p>
                <button class="submitBtn">Restart the Quiz</button>
-         </section>
+               <div class="QA-section">
+                  <button class="js-QA-link">Show all Questions and Answers</button>
+                  <dl class="js-QA-content is-hidden" ></dl>
+               </div>
+               </section>
 
       </main>
       

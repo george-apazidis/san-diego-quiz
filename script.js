@@ -178,6 +178,7 @@ function renderResults () {
         renderCustomLevels();
         $('.results-section ul').show();
     } 
+    renderQandA();
 }
 
 
@@ -210,24 +211,24 @@ function renderCustomLevels () {
     // render custom message based on level
     switch (expertLevel) {
         case '1':
-            $('.js-l1').css('font-weight', 'bold');
+            $('.js-l1').css('font-weight', 'bold').effect("highlight",{color:"#5cb85c"},1500);;
             customMsg = `It looks like you don't know much about San Diego, 
                         so we are calling you a <strong>${level_1}</strong>. 
                         Be sure to visit some time and experience all the great things San Diego has to offer!`;
             break;
         case '2':
-            $('.js-l2').css('font-weight', 'bold');
+            $('.js-l2').css('font-weight', 'bold').effect("highlight",{color:"#5cb85c"},1500);;
             customMsg = `Nice work! You seem to know a few things about San Diego. 
                         You have earned the <strong>${level_2}</strong> status! 
                         Hope you learned something new. Don't forget to visit!`;
             break;
         case '3':
-            $('.js-l3').css('font-weight', 'bold');
+            $('.js-l3').css('font-weight', 'bold').effect("highlight",{color:"#5cb85c"},1500);;
             customMsg = `Great work! You know a lot about the city of San Diego
-                        and all the great things the city has to offer! You have earned the <strong>${level_3}</strong>`;
+                        and all the great things the city has to offer! You have earned the <strong>${level_3}</strong> status!`;
             break;
         case '4' :
-            $('.js-l4').css('font-weight', 'bold');
+            $('.js-l4').css('font-weight', 'bold').effect("highlight",{color:"#5cb85c"},1500);;
             customMsg = `Wow! A perfect score! You've earned the <strong>${level_4}</strong> status. Have you thought about running for office?`;
             break;
     }
@@ -285,6 +286,26 @@ function handleRestartButton () {
 
 } 
 
+// renders all questions and answers
+function renderQandA () {
+    for ( let i = 0 ; i < STORE.length ; i++) {
+        $('.js-QA-content').append(`
+        <dt><strong>${STORE[i].question}</strong></dt>
+        <dd><strong>${STORE[i].correctAnswer}</strong> - ${STORE[i].blurb}</dd>`);
+    }  
+}
+
+function handleShowAllQandA () {
+
+    $(".js-QA-link").on('click', function() {
+        $(this).toggleClass('is-active')
+            .next(".js-QA-content")
+            .stop()
+            .slideToggle(500);
+    });
+
+}
+
 // Show final results
 
 // call back function when page loads
@@ -292,6 +313,7 @@ function handleButtons () {
     handleStartButton();
     handleSubmitButton();
     handleNextButton();
+    handleShowAllQandA();
     handleRestartButton();
   }
 
