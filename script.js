@@ -18,6 +18,8 @@ function handleStartButton () {
         // remove class on body for welcome screen
         $('body').removeClass('intro');
 
+        $('.question-section').css("display","flex");
+        
         renderQuestion();
         renderAnswers();
     });
