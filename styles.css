@@ -196,6 +196,7 @@ section {
 
 .nextBtn {
     margin-top: auto;
+    flex: none; /* fix for mobile bug */
 }
 
 legend {
