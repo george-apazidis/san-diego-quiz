@@ -209,7 +209,7 @@ legend {
 label {
     padding: 0 15px;
     margin-bottom: 10px;
-    min-height: 52px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -225,6 +225,7 @@ label:hover, label:focus {
 
 form, fieldset {
     height: 100%;
+    width: 100%;
 }
 
 fieldset {
@@ -287,7 +288,7 @@ input[type=radio] {
 .correct, .incorrect {
     text-align: center;
     text-transform: uppercase;
-    margin-top: 15px;
+    margin-top: 12px;
     margin-bottom: 10px;
 }
 
