@@ -168,7 +168,6 @@ section {
     display: none;
     flex: 1;
     flex-direction: column;
-    overflow: auto;
 }
 
 .score {
