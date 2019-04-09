@@ -22,6 +22,9 @@ function handleStartButton () {
 
         renderQuestion();
         renderAnswers();
+
+        // preload current answer image here for quick loading on answer page.
+        preloadImage(`images/${STORE[questionNum].image}`);
     });
 
 }

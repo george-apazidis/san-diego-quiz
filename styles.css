@@ -438,8 +438,9 @@ dd {
     }
 
     .correct-img {
-        height: 201px;
-        min-height: 201px;
+        max-height: 201px;
+        min-height: 180px;
+        flex-grow: 10;
     }
 
     label {
@@ -460,6 +461,7 @@ dd {
 @media (min-width: 600px) {  
     
     body {
+        display: block;
         padding: 20px;
         font-size: 20px;
         min-height: min-content;
