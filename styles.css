@@ -201,7 +201,6 @@ section {
 legend {
     margin-bottom: 20px;
     line-height: 22px;
-    min-height: 44px;
     display: flex;
     align-items: center;
 }
@@ -209,7 +208,7 @@ legend {
 label {
     padding: 0 15px;
     margin-bottom: 10px;
-    min-height: 50px;
+    min-height: 30px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -306,8 +305,9 @@ input[type=radio] {
 }
 
 .js-blurb {
-    margin-bottom: 0;
-    min-height: 76px;
+    margin: 0;
+    padding-bottom: 10px;
+    
 }
 
 .answer-section p {
@@ -318,7 +318,7 @@ input[type=radio] {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-    min-height: 37px;
+    padding-bottom: 12px;
 }
 
 .results-section ul {
