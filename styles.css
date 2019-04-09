@@ -208,7 +208,7 @@ legend {
 label {
     padding: 0 15px;
     margin-bottom: 10px;
-    min-height: 30px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -440,7 +440,7 @@ dd {
 
     label {
         padding: 0 21px;
-        min-height: 62px;
+        min-height: 40px; /*62*/
     }
 
     .js-blurb {
