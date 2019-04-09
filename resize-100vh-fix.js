@@ -13,6 +13,7 @@ function resizeStuff() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+// function that will resize the body height when the window is resized.
 let TO = false;
 $(window).resize(function(){
     if(TO !== false) {

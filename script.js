@@ -302,8 +302,16 @@ function handleShowAllQandA () {
             .next(".js-QA-content")
             .stop()
             .slideToggle(500);
-    });
+        
+        let showHide = $('.js-QA-link span').text();
 
+        if (showHide == 'Show') {
+            $('.js-QA-link span').text('Hide');
+        }
+        else {
+            $('.js-QA-link span').text('Show');
+        }
+    });
 }
 
 // Show final results

@@ -7,10 +7,6 @@ body, html {
     padding: 0;
 }
 
-html {
-
-}
-
 body {
     height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     /* fix for mobile 100vh bug */
@@ -354,7 +350,7 @@ input[type=radio] {
     text-align: left;
 }
 
-.is-hidden { display:  block; }
+.is-hidden { display:  none; }
 
 .js-QA-link {
     font-size: 1rem;
@@ -381,9 +377,12 @@ input[type=radio] {
     padding-left: 5px;
 }
 
+.js-QA-link.is-active {
+    content: "Hide all Questions and Answers";
+}
+
 .js-QA-link.is-active:after {
     content: "\25b2";
-
 }
 
 .js-QA-link:after,
@@ -434,9 +433,8 @@ dd {
     
     body {
         padding: 20px;
-        display: block;
         font-size: 20px;
-        height: auto;
+        min-height: min-content;
     }
 
     .wrap {
