@@ -168,6 +168,7 @@ section {
     display: none;
     flex: 1;
     flex-direction: column;
+    overflow: auto;
 }
 
 .score {
@@ -440,7 +441,7 @@ dd {
 
     label {
         padding: 0 21px;
-        min-height: 40px; /*62*/
+        min-height: 62px;
     }
 
     .js-blurb {
