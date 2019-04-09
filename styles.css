@@ -110,6 +110,7 @@ body.intro {
     background-color: rgba(255,255,255,0.8);
     color: #222;
     overflow: auto;
+    border: 2px solid red;
 }
 
 header {
