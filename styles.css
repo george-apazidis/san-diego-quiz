@@ -276,6 +276,7 @@ input[type=radio] {
 .correct-img {
     width: 100%;
     height: 155px;
+    min-height: 155px; /* for flexbox */
     background-size: cover;
     background-position: center;
     margin-bottom: 10px;
@@ -439,6 +440,7 @@ dd {
 
     .correct-img {
         height: 201px;
+        min-height: 201px;
     }
 
     label {
