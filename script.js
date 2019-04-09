@@ -19,7 +19,7 @@ function handleStartButton () {
         $('body').removeClass('intro');
 
         $('.question-section').css("display","flex");
-        
+
         renderQuestion();
         renderAnswers();
     });
@@ -96,7 +96,7 @@ function renderCorrectAnswer (isAnswerCorrect) {
     $('.question-section').hide();
 
     // show answer section
-    $('.answer-section').show();
+    $('.answer-section').css("display","flex");
 
     // update score
     if (isAnswerCorrect === true) {

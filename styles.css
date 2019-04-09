@@ -164,6 +164,12 @@ section {
     flex: 1;
 }
 
+.answer-section {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+}
+
 .score {
     font-size: 20px;
 }
@@ -189,7 +195,7 @@ section {
 }
 
 .nextBtn {
-    margin-top: 15px;
+    margin-top: auto;
 }
 
 legend {
@@ -533,7 +539,8 @@ dd {
     display: flex;
     flex-direction: column;
 
-.question-section {
+.question-section,
+.answer-section {
     display: flex;
     flex: 1;
 
