@@ -293,6 +293,7 @@ function handleRestartButton () {
 
 // renders all questions and answers
 function renderQandA () {
+    $('.js-QA-content').html("");
     for ( let i = 0 ; i < STORE.length ; i++) {
         $('.js-QA-content').append(`
         <dt><strong>${STORE[i].question}</strong></dt>

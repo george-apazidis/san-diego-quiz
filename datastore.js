@@ -41,7 +41,7 @@ const STORE = [
         alt: 'Petco Stadium in San Diego'
     },
     {
-      question: 'Where is San Diego\'s largest farmers market located?',
+      question: 'Where is San Diego\'s largest farmers\' market located?',
       answers: [
         'La Jolla',
         'Little Italy',
@@ -49,7 +49,7 @@ const STORE = [
         'Encinitas'
         ],
       correctAnswer: 'Little Italy',
-      image: 'farmers-market.png',
+      image: 'farmers-market.jpg',
       blurb: 'The Little Italy Mercato is the largest farmers\' market in San Diego County with over 200 vendors. It\'s open year-round, every Saturday from 8am-2pm.',
       alt: 'Farmer\'s Market in Little Italy, San Diego'
     },
