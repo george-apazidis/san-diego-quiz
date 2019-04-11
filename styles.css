@@ -287,10 +287,13 @@ input[type=radio] {
 }
 
 .correct, .incorrect {
+    display: inline-block;
+    width: auto;
+    margin: 12px auto 10px auto;
+    padding: 0 10px;
+    border-radius: 6px;
     text-align: center;
     text-transform: uppercase;
-    margin-top: 12px;
-    margin-bottom: 10px;
 }
 
 .correct    { color: green; }
