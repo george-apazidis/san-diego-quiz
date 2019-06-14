@@ -46,8 +46,7 @@ Results page:
 
 * HTML5
 * CSS3
-* JavaScript
-* jQuery
+* JavaScript (ES6)
 
 ## Development Road Map
 
