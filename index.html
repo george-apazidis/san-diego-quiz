@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>San Diego Quiz</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <meta name="author" content="George Apazidis">
-      <meta name="description" content="A quiz to test your knowledge of the city of San Diego">
-      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-      <link href="styles.css" rel="stylesheet" type="text/css" />
-      <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
-   </head>
-   <body class="intro">
-      <main class="wrap">
-         <header role="banner">
-            <div class="logo"></div>
-            <h1><a href="index.html">San Diego Quiz</a></h1>
-         </header>
-         <section class="start-section" >
-            <p>Think you know about the city of <span>San Diego?</span></p>
-            <button>Start Quiz</button>
-         </section>
-         <section class="score">
-            <ul>
-               <li>Question: <span class="js-questionNumber">1</span>/<span class="js-maxQuestions"></span></li>
-               <li>Score: <span class="js-currentScore">0</span></li>
-            </ul>
-         </section>
-         <section class="question-section">         
-            <form>
-               <fieldset>
-                  <div>
-                     <legend></legend>
-                     <button type="submit" class="submitBtn">Check</button>
-                  </div>
-               </fieldset>
-            </form>
-         </section>
-         <section class="answer-section">
-            <button type="submit" class="nextBtn">Next Question</button>
-         </section>
-         <section class="results-section">
-            <h2 class="final-score">Final Score</h2>
-            <ul>
-               <li class="js-l1"><span class="scoreRange"></span> <span class="name"></span></li>
-               <li class="js-l2"><span class="scoreRange"></span> <span class="name"></span></li>
-               <li class="js-l3"><span class="scoreRange"></span> <span class="name"></span></li>
-               <li class="js-l4"><span class="scoreRange"></span> <span class="name"></span></li>
-            </ul>
-            <p class="js-custom-msg"></p>
-            <p class="ty-msg">Thank you for taking the quiz!</p>
-            <button class="submitBtn">Restart the Quiz</button>
-            <div class="QA-section">
-               <button class="js-QA-link"><span>Show</span> all Questions and Answers</button>
-               <dl class="js-QA-content is-hidden" ></dl>
-            </div>
-         </section>
-      </main>
-      <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-      <script
-         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-         crossorigin="anonymous"></script>
-      <script src="datastore.js" ></script>
-      <script src="script.js" ></script>
-      <script src="resize-100vh-fix.js" ></script>
-  </body>
+
+<head>
+   <title>San Diego Quiz</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <meta name="author" content="George Apazidis">
+   <meta name="description" content="A quiz to test your knowledge of the city of San Diego">
+   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+   <meta property="og:title" content="San Diego Quiz">
+   <meta property="og:image"
+      content="https://george-apazidis.github.io/san-diego-quiz/images/san-diego-background-hd.jpg">
+   <meta property="og:description"
+      content="A single page web app, 'San Diego Quiz' is a fully responsive app that quizzes the user about the city of San Diego. When finished, it will calculate and display the user's score along with a level of expertise scale.">
+   <meta property="og:url" content="https://george-apazidis.github.io/san-diego-quiz/">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+</head>
+
+<body class="intro">
+   <main class="wrap">
+      <header role="banner">
+         <div class="logo"></div>
+         <h1><a href="index.html">San Diego Quiz</a></h1>
+      </header>
+      <section class="start-section">
+         <p>Think you know about the city of <span>San Diego?</span></p>
+         <button>Start Quiz</button>
+      </section>
+      <section class="score">
+         <ul>
+            <li>Question: <span class="js-questionNumber">1</span>/<span class="js-maxQuestions"></span></li>
+            <li>Score: <span class="js-currentScore">0</span></li>
+         </ul>
+      </section>
+      <section class="question-section">
+         <form>
+            <fieldset>
+               <div>
+                  <legend></legend>
+                  <button type="submit" class="submitBtn">Check</button>
+               </div>
+            </fieldset>
+         </form>
+      </section>
+      <section class="answer-section">
+         <button type="submit" class="nextBtn">Next Question</button>
+      </section>
+      <section class="results-section">
+         <h2 class="final-score">Final Score</h2>
+         <ul>
+            <li class="js-l1"><span class="scoreRange"></span> <span class="name"></span></li>
+            <li class="js-l2"><span class="scoreRange"></span> <span class="name"></span></li>
+            <li class="js-l3"><span class="scoreRange"></span> <span class="name"></span></li>
+            <li class="js-l4"><span class="scoreRange"></span> <span class="name"></span></li>
+         </ul>
+         <p class="js-custom-msg"></p>
+         <p class="ty-msg">Thank you for taking the quiz!</p>
+         <button class="submitBtn">Restart the Quiz</button>
+         <div class="QA-section">
+            <button class="js-QA-link"><span>Show</span> all Questions and Answers</button>
+            <dl class="js-QA-content is-hidden"></dl>
+         </div>
+      </section>
+   </main>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+   <script src="datastore.js"></script>
+   <script src="script.js"></script>
+   <script src="resize-100vh-fix.js"></script>
+</body>
+
 </html>
